@@ -51,6 +51,8 @@ export const CardHome = () => {
         border: 1,
         p: 2,
         m: 1,
+
+        background: "linear-gradient(yellow,red)",
       }}
     >
       <Card variant="outlined" sx={{ border: 1 }}>

@@ -1,36 +1,52 @@
 import { NavbarHome } from "./components/NavbarHome";
-import { Grid } from "@mui/material";
+import { Grid, Pagination } from "@mui/material";
 import { Boxblog } from "./components/Boxblog";
+import { maxWidth } from "@mui/system";
 
 export const App = () => {
   return (
-    <>
-      <Grid container direction="column" rowSpacing={12}>
-        <Grid item xs={12} paddingBottom="100px">
-          <NavbarHome />
-        </Grid>
+    <div
+      style={{
+        backgroundColor: "linear-gradient(blue,green)",
+        width: "100%",
+      }}
+    >
+      <Grid
+        container
+        maxWidth="100%"
+        sx={{ background: "linear-gradient(blue,green)" }}
+      >
         <Grid
           item
           xs={12}
-          direction="column"
+          paddingBottom="10px"
           sx={{
-            display: "flex",
-            justifyContent: "center",
-            alignItems: "center",
-            border: 1,
-            m: 1,
-            borderColor: "red",
-            background: "linear-gradiente(blue,green)",
-            width: 1,
-            height: 1,
+            backgroundColor: "linear-gradient(blue,green)",
           }}
         >
-          <Boxblog />
-          <Boxblog />
-          <Boxblog />
-          <Boxblog />
+          <NavbarHome />
         </Grid>
+        <div style={{ padding: "10px 10px 10px 10px" }}>
+          <Grid
+            item
+            xs={12}
+            direction="column"
+            sx={{
+              display: "flex",
+              justifyContent: "center",
+              alignItems: "center",
+              border: 1,
+              borderColor: "red",
+              width: 1,
+              height: 1,
+              background: "linear-gradient(green,yellow)",
+            }}
+          >
+            <Boxblog />
+            <Boxblog />
+          </Grid>
+        </div>
       </Grid>
-    </>
+    </div>
   );
 };

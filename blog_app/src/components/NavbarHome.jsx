@@ -37,10 +37,10 @@ export const NavbarHome = () => {
 
   return (
     <AppBar
-      position="absolute"
+      position="static"
       sx={{ background: "linear-gradient(to right, blue,#76ff03)" }}
     >
-      <Container maxWidth="xl">
+      <Container maxWidth="false">
         <Toolbar disableGutters>
           <AdbIcon sx={{ display: { xs: "none", md: "flex" }, mr: 1 }} />
           <Typography
